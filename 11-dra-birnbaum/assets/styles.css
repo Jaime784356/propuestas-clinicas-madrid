@@ -579,3 +579,30 @@ body { background: var(--cream); }
 .theme-dark .g-seal, .theme-dark .tcard__ico, .theme-dark .stack__ico { background: #2a2418; color: var(--sky); }
 .theme-dark .exit__box { background: #1c1b19; }
 .theme-dark .nav.is-open .nav__links { background: #121212; }
+
+/* Horario online */
+.dotlive { width: 9px; height: 9px; border-radius: 50%; background: #9aa3ad; flex: none; display: inline-block; }
+.is-open .dotlive { background: #2fbf71; box-shadow: 0 0 0 0 rgba(47,191,113,.6); animation: livepulse 1.8s infinite; }
+.is-closed .dotlive { background: #e0554b; }
+@keyframes livepulse { 70% { box-shadow: 0 0 0 8px rgba(47,191,113,0); } 100% { box-shadow: 0 0 0 0 rgba(47,191,113,0); } }
+.topbar__status { text-decoration: none; color: inherit; font-weight: 600; }
+.sched { background: var(--sand); }
+.sched__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 70px); align-items: center; }
+.sched__status { display: flex; align-items: center; gap: 14px; background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 16px 20px; margin: 6px 0 20px; }
+.sched__status .dotlive { width: 14px; height: 14px; }
+.sched__status b { display: block; color: var(--navy); font-size: 1.1rem; }
+.sched__status small { color: var(--muted); }
+.sched__status.is-open { border-color: #2fbf71; }
+.sched__status.is-closed { border-color: #e0554b; }
+.sched__card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 30px; box-shadow: var(--shadow); }
+.sched__week { list-style: none; padding: 0; margin: 0; }
+.sched__week li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px dashed var(--line); font-weight: 500; }
+.sched__week li:last-child { border: 0; }
+.sched__week li.is-closed span:last-child { color: var(--muted); }
+.sched__week li.is-today { color: var(--cta); font-weight: 700; }
+.sched__week em { font-style: normal; font-size: .72rem; background: var(--cta); color: #fff; padding: 2px 8px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
+.sched__note { font-size: .85rem; color: var(--muted); margin: 14px 0 0; }
+.theme-dark .sched__status, .theme-dark .sched__card { background: #1c1b19; border-color: #2d2a26; }
+.theme-dark .sched__status b { color: #f6f1e8; }
+@media (max-width: 1020px) { .sched__grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .topbar__status { display: inline-flex !important; } .topbar__tel { display: none; } }

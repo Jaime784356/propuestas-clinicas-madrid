@@ -55,12 +55,12 @@
 <div class="topbar"><div class="wrap topbar__in">
   <span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg> Chamberí · C/ Ramiro II 10</span>
   <span class="topbar__stars"><span class="stars">★★★★★</span> 4,9 en Google</span>
-  <span class="topbar__hours"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2v5.4Z"/></svg> <span data-horario-corto>Con cita previa</span></span>
+  <a href="#horario" class="topbar__hours topbar__status" data-open-status><span class="dotlive"></span><span data-open-txt>Horario</span></a>
   <a href="tel:+34914418042" class="topbar__tel"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg> 91 441 80 42</a>
 </div></div>
 <header class="nav" id="nav"><div class="wrap nav__in">
   <a href="#inicio" class="logo" aria-label="Clínica Dental Medics Dr. Ferrer, inicio"><img src="img/logo.png" alt="Clínica Dental Medics Dr. Ferrer"></a>
-  <nav class="nav__links" aria-label="Principal"><a href="#oferta">Oferta</a><a href="#tratamientos">Tratamientos</a><a href="#equipo">Equipo</a><a href="#casos">Casos reales</a><a href="#financiacion">Financiación</a><a href="#contacto">Contacto</a></nav>
+  <nav class="nav__links" aria-label="Principal"><a href="#oferta">Oferta</a><a href="#tratamientos">Tratamientos</a><a href="#equipo">Equipo</a><a href="#casos">Casos reales</a><a href="#horario">Horario</a><a href="#contacto">Contacto</a></nav>
   <a href="#reservar" class="btn btn--cta btn--sm nav__cta">Reservar cita online</a>
   <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
@@ -209,6 +209,20 @@
       <p class="form__micro">🔒 Tus datos están seguros. Te confirmamos la cita por teléfono.</p>
     </div>
   </form>
+</div></section>
+<section class="sched" id="horario"><div class="wrap sched__grid">
+  <div>
+    <p class="kicker">Horario online</p>
+    <h2>¿Estamos abiertos ahora?</h2>
+    <div class="sched__status" data-open-status><span class="dotlive"></span><div><b data-open-txt>Consultando horario…</b><small data-open-sub></small></div></div>
+    <p>Horario actualizado en tiempo real (hora de Madrid). Y aunque estemos cerrados, puedes <strong>reservar tu cita online las 24 horas</strong>: te la confirmamos en cuanto abramos.</p>
+    <div class="contact__btns"><a class="btn btn--cta" href="#reservar">Reservar online 24/7 →</a><a class="btn btn--ghost" href="tel:+34914418042"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg> 91 441 80 42</a></div>
+  </div>
+  <div class="sched__card">
+    <h3>Horario semanal</h3>
+    <ul class="sched__week" data-hours-week><li>Con cita previa</li></ul>
+    <p class="sched__note">Festivos nacionales cerrado. Citas con cita previa.</p>
+  </div>
 </div></section>
 <section class="contact" id="contacto"><div class="wrap contact__grid">
   <div class="contact__info">

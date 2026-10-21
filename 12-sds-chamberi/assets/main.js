@@ -52,6 +52,49 @@ const CONFIG = Object.assign({
     $$("[data-horario-corto]").forEach(el => (el.textContent = corto));
   }
 
+  // ===== Horario online: abierto/cerrado en tiempo real (hora de Madrid) =====
+  const madrid = () => new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Madrid" }));
+  const mins = t => { const [h, m] = t.split(":").map(Number); return h * 60 + m; };
+  const isoD = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const tramosDe = d => CONFIG.festivos.includes(isoD(d)) ? [] : (CONFIG.horario[d.getDay()] || []);
+  function estado() {
+    const now = madrid(), m = now.getHours() * 60 + now.getMinutes();
+    const hoy = tramosDe(now);
+    const dentro = hoy.find(([a, b]) => m >= mins(a) && m < mins(b));
+    if (dentro) {
+      const quedan = mins(dentro[1]) - m;
+      return { open: true, txt: `Abierto ahora · hasta las ${dentro[1]}`, sub: quedan <= 30 ? `Cierra en ${quedan} min` : "Llámanos o reserva online" };
+    }
+    for (let i = 0; i < 14; i++) {
+      const d = new Date(now); d.setDate(d.getDate() + i);
+      const t = tramosDe(d).find(([a]) => i > 0 || mins(a) > m);
+      if (t) {
+        const cuando = i === 0 ? "hoy" : i === 1 ? "mañana" : `el ${DIAS[d.getDay()]}`;
+        return { open: false, txt: `Cerrado ahora · abre ${cuando} a las ${t[0]}`, sub: "Reserva online ahora y te confirmamos al abrir" };
+      }
+    }
+    return { open: false, txt: "Cerrado ahora", sub: "Reserva online y te llamamos" };
+  }
+  function pintarEstado() {
+    const s = estado();
+    $$("[data-open-status]").forEach(el => {
+      el.classList.toggle("is-open", s.open); el.classList.toggle("is-closed", !s.open);
+      const t = el.querySelector("[data-open-txt]"), sub = el.querySelector("[data-open-sub]");
+      if (t) t.textContent = s.txt; else el.textContent = s.txt;
+      if (sub) sub.textContent = s.sub;
+    });
+  }
+  const semana = $("[data-hours-week]");
+  if (semana) {
+    const hoyM = madrid().getDay();
+    semana.innerHTML = orden.map(d => {
+      const t = tramosTxt(d);
+      return `<li class="${d === hoyM ? "is-today" : ""}${t ? "" : " is-closed"}"><span>${cap(DIAS[d])}${d === hoyM ? " <em>Hoy</em>" : ""}</span><span>${t || "Cerrado"}</span></li>`;
+    }).join("");
+  }
+  pintarEstado();
+  setInterval(pintarEstado, 60000);
+
   // Navegación
   const nav = $("#nav");
   const burger = $(".nav__burger");
