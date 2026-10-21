@@ -606,3 +606,32 @@ body { background: var(--cream); }
 .theme-dark .sched__status b { color: #f6f1e8; }
 @media (max-width: 1020px) { .sched__grid { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .topbar__status { display: inline-flex !important; } .topbar__tel { display: none; } }
+
+/* Portada clara con foto de instalaciones */
+.hero--bright { background: var(--cream); }
+.hero--bright .hero__bg img { filter: saturate(1.05) brightness(1.04); }
+.hero--bright .hero__bg::after { background: linear-gradient(90deg, color-mix(in srgb, var(--cream) 97%, transparent) 0%, color-mix(in srgb, var(--cream) 90%, transparent) 42%, color-mix(in srgb, var(--cream) 55%, transparent) 68%, color-mix(in srgb, var(--cream) 18%, transparent) 100%); }
+.hero--bright .hero__grid { min-height: 660px; align-items: center; }
+.hero--bright h1 { color: var(--navy); }
+.hero--bright h1 em { color: var(--sky); }
+.hero--bright .lead, .hero--bright .hero__checks li { color: var(--ink); }
+.hero--bright .lead strong { color: var(--navy); }
+.hero--bright .hero__foot { border-color: var(--line); }
+.hero--bright .hero__rating, .hero--bright .hero__scarcity { color: var(--muted); }
+.hero--bright .hero__rating b { color: var(--navy); }
+.hero--bright .btn--ghost { border-color: var(--navy); color: var(--navy); background: color-mix(in srgb, var(--cream) 70%, transparent); }
+.hero--bright .btn--ghost:hover { background: var(--navy); color: #fff; }
+.hero--bright .hero__panel { align-self: center; backdrop-filter: blur(6px); background: color-mix(in srgb, #fff 94%, transparent); }
+.theme-dark .hero--bright .hero__panel { background: color-mix(in srgb, #1c1b19 92%, transparent); }
+.theme-dark .hero--bright .btn--ghost { border-color: #f3eee6; color: #f3eee6; }
+@media (max-width: 1020px) {
+  .hero--bright .hero__bg::after { background: linear-gradient(180deg, color-mix(in srgb, var(--cream) 88%, transparent), color-mix(in srgb, var(--cream) 95%, transparent)); }
+  .hero--bright .hero__grid { min-height: 0; }
+}
+.hero--bright .hero__grid { padding: 44px 0 56px; min-height: 620px; }
+@media (max-width: 1020px) {
+  .hero--bright .hero__bg { position: relative; inset: auto; height: 230px; }
+  .hero--bright .hero__bg::after { background: linear-gradient(180deg, transparent 45%, var(--cream) 100%); }
+  .hero--bright .hero__bg img { object-position: center; }
+  .hero--bright .hero__grid { padding: 0 0 48px; margin-top: -40px; }
+}

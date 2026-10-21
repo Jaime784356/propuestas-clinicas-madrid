@@ -65,7 +65,8 @@
   <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <main>
-<section class="hero hero--portrait" id="inicio">
+<section class="hero hero--overlay hero--bright" id="inicio">
+  <div class="hero__bg"><img src="img/herobg.jpg" alt="Instalaciones de Clínica Dental Madrid Sur" fetchpriority="high"></div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <a href="#oferta" class="hero__offer"><span class="hero__offer-tag">Nuevos pacientes</span> Estudio de implantes 3D <b>0&nbsp;€</b> <span aria-hidden="true">→</span></a>
@@ -81,11 +82,13 @@
         <span class="hero__scarcity"><span class="pulse"></span><span>Quedan <b data-plazas>12</b> plazas en <b data-mes>este mes</b></span></span>
       </div>
     </div>
-    <div class="hero__media">
-      <img src="img/hero.jpg" alt="Dra. Mercedes Pisani, directora médica de Madrid Sur" fetchpriority="high">
-      <a href="#oferta" class="float-card float-card--offer"><small>Estudio de implantes</small><b>0 €</b><span><s>190 €</s> · con TAC 3D</span></a>
-      <div class="hero__name"><b>Dra. Mercedes Pisani</b><small>Implantología · Formada en el Hospital La Paz</small></div>
-    </div>
+    <aside class="hero__panel">
+      <p class="kicker">Estudio de implantes</p>
+      <h3>Estudio de Implantes 3D</h3>
+      <div class="offer__price" style="margin:10px 0 6px"><span class="offer__was">Valor normal 190 €</span><span class="offer__now">0 €</span></div>
+      <ul><li>Valoración con la Dra. Pisani</li><li>TAC dental 3D</li><li>Planificación de cirugía guiada y precio cerrado</li></ul>
+      <a href="#reservar" class="btn btn--cta btn--block">Reservar mi estudio gratis</a>
+    </aside>
   </div>
 </section>
 <section class="stats" aria-label="La clínica en cifras"><div class="wrap"><ul><li><b>Desde 1990</b><span>en Vallecas</span></li><li><b>2ª</b><span>generación de dentistas</span></li><li><b>4,7 ★</b><span>141 reseñas en Google</span></li><li><b>1.490 €</b><span>Invisalign todo incluido</span></li></ul></div></section>

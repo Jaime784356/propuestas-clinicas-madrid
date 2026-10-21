@@ -61,7 +61,8 @@ h1, h2, h3 { font-weight: 700; }
   <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <main>
-<section class="hero" id="inicio">
+<section class="hero hero--overlay hero--bright" id="inicio">
+  <div class="hero__bg"><img src="img/herobg.jpg" alt="Instalaciones de Clínica Dental De La Plaza" fetchpriority="high"></div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <a href="#oferta" class="hero__offer"><span class="hero__offer-tag">Nuevos pacientes</span> Visita de confianza <b>0&nbsp;€</b> <span aria-hidden="true">→</span></a>
@@ -77,11 +78,13 @@ h1, h2, h3 { font-weight: 700; }
         <span class="hero__scarcity"><span class="pulse"></span><span>Quedan <b data-plazas>12</b> plazas en <b data-mes>este mes</b></span></span>
       </div>
     </div>
-    <div class="hero__media">
-      <img src="img/hero.jpg" alt="Equipo de Clínica Dental De La Plaza" class="hero__img--rect" fetchpriority="high">
-      <a href="#oferta" class="float-card float-card--offer"><small>Primera visita</small><b>0 €</b><span><s>150 €</s> · y 2ª opinión</span></a>
-      <div class="float-card float-card--a"><span class="float-card__ico">✓</span><div><b>Equipo estable</b><small>Siempre te atienden los mismos especialistas</small></div></div>
-    </div>
+    <aside class="hero__panel">
+      <p class="kicker">Primera visita</p>
+      <h3>Visita de Confianza De La Plaza</h3>
+      <div class="offer__price" style="margin:10px 0 6px"><span class="offer__was">Valor normal 150 €</span><span class="offer__now">0 €</span></div>
+      <ul><li>Exploración con un especialista del equipo</li><li>Radiografía digital de diagnóstico</li><li>Plan basado en la evidencia, con precio cerrado</li></ul>
+      <a href="#reservar" class="btn btn--cta btn--block">Reservar mi visita gratis</a>
+    </aside>
   </div>
 </section>
 <section class="stats" aria-label="La clínica en cifras"><div class="wrap"><ul><li><b>1965</b><span>año de apertura</span></li><li><b>2</b><span>generaciones de odontoestomatólogos</span></li><li><b>3</b><span>universidades donde enseñan</span></li><li><b>SEOBE</b><span>presidencia de la sociedad</span></li></ul></div></section>

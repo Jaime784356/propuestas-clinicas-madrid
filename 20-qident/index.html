@@ -61,7 +61,8 @@ h1, h2, h3 { letter-spacing: -.025em; }
   <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <main>
-<section class="hero" id="inicio">
+<section class="hero hero--overlay hero--bright" id="inicio">
+  <div class="hero__bg"><img src="img/herobg.jpg" alt="Instalaciones de Qident Clínica Dental" fetchpriority="high"></div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <a href="#oferta" class="hero__offer"><span class="hero__offer-tag">Nuevos pacientes</span> Visita + presupuesto cerrado <b>0&nbsp;€</b> <span aria-hidden="true">→</span></a>
@@ -77,11 +78,13 @@ h1, h2, h3 { letter-spacing: -.025em; }
         <span class="hero__scarcity"><span class="pulse"></span><span>Quedan <b data-plazas>12</b> plazas en <b data-mes>este mes</b></span></span>
       </div>
     </div>
-    <div class="hero__media">
-      <img src="img/hero.jpg" alt="Paciente sonriendo tras su tratamiento en Qident" class="hero__img--rect" fetchpriority="high">
-      <a href="#oferta" class="float-card float-card--offer"><small>Primera visita</small><b>0 €</b><span><s>120 €</s> · sin compromiso</span></a>
-      <div class="float-card float-card--a"><span class="float-card__ico">✓</span><div><b>No somos franquicia</b><small>Trato humano y transparente</small></div></div>
-    </div>
+    <aside class="hero__panel">
+      <p class="kicker">Primera visita</p>
+      <h3>Visita Presupuesto Cerrado</h3>
+      <div class="offer__price" style="margin:10px 0 6px"><span class="offer__was">Valor normal 120 €</span><span class="offer__now">0 €</span></div>
+      <ul><li>Exploración completa</li><li>Radiografía de diagnóstico</li><li>Presupuesto cerrado por escrito</li></ul>
+      <a href="#reservar" class="btn btn--cta btn--block">Reservar mi visita gratis</a>
+    </aside>
   </div>
 </section>
 <section class="stats" aria-label="La clínica en cifras"><div class="wrap"><ul><li><b>~30</b><span>años en Tetuán</span></li><li><b>4,7 ★</b><span>+50 reseñas en Google</span></li><li><b>24</b><span>meses sin intereses</span></li><li><b>0</b><span>franquicias</span></li></ul></div></section>

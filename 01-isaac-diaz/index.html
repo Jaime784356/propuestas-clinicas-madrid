@@ -65,7 +65,8 @@
   <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <main>
-<section class="hero hero--portrait" id="inicio">
+<section class="hero hero--overlay hero--bright" id="inicio">
+  <div class="hero__bg"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&q=70&auto=format&fit=crop" alt="Instalaciones de Clínica Dental Isaac Díaz" fetchpriority="high"></div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
       <a href="#oferta" class="hero__offer"><span class="hero__offer-tag">Nuevos pacientes</span> Diagnóstico Salva-Diente <b>0&nbsp;€</b> <span aria-hidden="true">→</span></a>
@@ -81,11 +82,13 @@
         <span class="hero__scarcity"><span class="pulse"></span><span>El Dr. Díaz reserva <b data-plazas>8</b> plazas gratis en <b data-mes>este mes</b></span></span>
       </div>
     </div>
-    <div class="hero__media">
-      <img src="img/hero.jpg" alt="Dr. Isaac Díaz, dentista en Moncloa" fetchpriority="high">
-      <a href="#oferta" class="float-card float-card--offer"><small>Primera visita</small><b>0 €</b><span><s>120 €</s> · con el Dr. Díaz</span></a>
-      <div class="hero__name"><b>Dr. Isaac Díaz</b><small>Endodoncia · Implantes · Periodoncia</small></div>
-    </div>
+    <aside class="hero__panel">
+      <p class="kicker">Primera visita</p>
+      <h3>Diagnóstico Salva-Diente</h3>
+      <div class="offer__price" style="margin:10px 0 6px"><span class="offer__was">Valor normal 120 €</span><span class="offer__now">0 €</span></div>
+      <ul><li>Exploración completa con el Dr. Isaac Díaz</li><li>Radiografías digitales de diagnóstico</li><li>Plan de tratamiento por escrito con precio cerrado</li></ul>
+      <a href="#reservar" class="btn btn--cta btn--block">Reservar mi Diagnóstico gratis</a>
+    </aside>
   </div>
 </section>
 <section class="stats" aria-label="La clínica en cifras"><div class="wrap"><ul><li><b>+20</b><span>años de experiencia clínica</span></li><li><b>4,9 ★</b><span>55 reseñas en Google</span></li><li><b>1</b><span>mismo doctor de principio a fin</span></li><li><b>0 €</b><span>primera visita y 2ª opinión</span></li></ul></div></section>
