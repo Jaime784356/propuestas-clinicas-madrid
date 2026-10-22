@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta web · Dental Pozuelo · Dr. Menéndez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --p: #14274e; --a: #3a8fd0; --cta: #ef7d0b; --soft: #e5eff9; --ink: #1c2430; --muted: #5d6776; --line: #e6e0d7; --bg: #faf9f6; }
+* { box-sizing: border-box; } body { margin: 0; font: 16px/1.6 Inter, system-ui, sans-serif; color: var(--ink); background: var(--bg); }
+.wrap { width: min(1100px, 100% - 32px); margin: 0 auto; }
+h1, h2 { font-family: Fraunces, Georgia, serif; line-height: 1.15; margin: 0 0 .5em; color: var(--p); }
+h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); } h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+header { background: var(--p); color: #fff; padding: 46px 0 40px; } header h1 { color: #fff; } header p { opacity: .85; max-width: 720px; font-size: 1.1rem; }
+.kicker { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 700; color: var(--a); margin: 0 0 8px; }
+header .kicker { color: #fff; opacity: .7; }
+section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.compare figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.compare img { width: 100%; display: block; aspect-ratio: 1366/860; object-fit: cover; object-position: top; }
+.compare figcaption { padding: 12px 16px; font-weight: 600; } .compare a { color: var(--cta); }
+.bad { background: #fff4f2; border-left: 4px solid #d1453b; padding: 14px 18px; border-radius: 8px; margin-top: 18px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.card b { display: block; color: var(--p); margin-bottom: 4px; font-size: 1.05rem; } .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.offer { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: start; }
+.offer ul { list-style: none; padding: 0; margin: 0; background: #fff; border-radius: 16px; border: 1px solid var(--line); }
+.offer li { padding: 14px 18px; border-bottom: 1px solid var(--line); } .offer li:last-child { border: 0; }
+.offer li b { display: block; color: var(--p); } .offer li span { color: var(--muted); font-size: .92rem; } .offer li.bonus { background: #fff8ec; }
+.big { font-family: Fraunces, serif; font-size: 3rem; color: var(--cta); line-height: 1; margin: 10px 0; }
+ul.proofs li { margin-bottom: 10px; }
+.roi { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.roi label { display: block; font-weight: 600; margin: 16px 0 4px; } .roi input { width: 100%; accent-color: var(--cta); }
+.roi output { font-weight: 700; color: var(--p); }
+.res { background: var(--p); color: #fff; border-radius: 18px; padding: 28px; }
+.res div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.res div:last-child { border: 0; } .res b { font-family: Fraunces, serif; font-size: 1.5rem; }
+.note { font-size: .85rem; color: var(--muted); }
+.price { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+.price .tag { font-family: Fraunces, serif; font-size: 3.6rem; color: var(--p); line-height: 1; }
+.checks { list-style: none; padding: 0; } .checks li { padding-left: 28px; position: relative; margin-bottom: 8px; }
+.checks li::before { content: "✓"; position: absolute; left: 0; color: #fff; background: #2f8f5b; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: .7rem; top: 3px; }
+.todo { list-style: none; padding: 0; } .todo li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; } .todo input { margin-top: 5px; }
+.btn { display: inline-block; background: var(--cta); color: #fff; padding: 14px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; }
+footer { padding: 30px 0 60px; color: var(--muted); font-size: .9rem; }
+@media (max-width: 800px) { .compare, .grid3, .offer, .roi, .price { grid-template-columns: 1fr; } }
+@media print { .roi input { display: none; } section { break-inside: avoid; } }
+</style></head>
+<body>
+<header><div class="wrap">
+  <p class="kicker">Propuesta de nueva web</p>
+  <h1>Dental Pozuelo · Dr. Menéndez: una web que convierte visitas en pacientes</h1>
+  <p>Hemos rediseñado vuestra web con vuestras fotos, vuestro equipo y vuestros datos reales, y le hemos añadido lo que hoy le falta: una oferta clara para pacientes nuevos, pruebas de autoridad y reserva online en un minuto.</p>
+  <p><a class="btn" href="./">Ver la web nueva →</a></p>
+</div></header>
+
+<section><div class="wrap">
+  <p class="kicker">Antes y después</p>
+  <h2>Lo que ve hoy un paciente… y lo que verá mañana</h2>
+  <div class="compare">
+    <figure><img src="portada.png" alt="Portada de la web actual"><figcaption>Web actual · <a href="https://www.pozuelodental.com/" target="_blank" rel="noopener">https://www.pozuelodental.com/</a></figcaption></figure>
+    <figure><img src="web-nueva-portada.png" alt="Portada de la web nueva"><figcaption>Web nueva · <a href="./">abrir la web completa →</a></figcaption></figure>
+  </div>
+  <p class="bad"><b>Por qué la web actual pierde pacientes:</b> Web anticuada o genérica: sin una oferta clara para pacientes nuevos, sin pruebas de autoridad visibles y sin reserva online por día y hora. Un paciente decide en pocos segundos si confía en una clínica; si la web parece descuidada, llama a la siguiente de Google.</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="kicker">Qué cambia</p>
+  <h2>Siete cosas que hace la web nueva y la actual no</h2>
+  <div class="grid3">
+    <div class="card"><b>1. Una oferta irresistible</b><p>«Estudio de Implantes Sin Coste»: una razón concreta para reservar hoy, explicada pieza a pieza con su valor.</p></div>
+    <div class="card"><b>2. Una promesa clara</b><p>El titular dice en una frase por qué elegiros a vosotros y no a la cadena de enfrente.</p></div>
+    <div class="card"><b>3. Autoridad visible</b><p>Años de experiencia, equipo con nombre, reseñas reales y casos de la clínica, a la vista.</p></div>
+    <div class="card"><b>4. Reserva online 24/7</b><p>El paciente elige día y hora en un minuto, también a las 11 de la noche. La clínica le llama para confirmar.</p></div>
+    <div class="card"><b>5. Pensada para el móvil</b><p>Barra fija con «Llamar» y «Reservar», textos legibles y botones grandes.</p></div>
+    <div class="card"><b>7. WhatsApp en todas partes</b><p>Botón de WhatsApp en la portada, flotante en toda la página y en la barra del móvil, directo al 608 039 753.</p></div>
+    <div class="card"><b>6. Lista para Google</b><p>Datos estructurados de clínica dental, títulos y descripciones optimizados para búsquedas del barrio.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap offer">
+  <div>
+    <p class="kicker">La oferta para pacientes nuevos</p>
+    <h2>Estudio de Implantes Sin Coste</h2>
+    <p class="big">0 €</p>
+    <p>Sabrás si puedes llevar implantes, cuántos necesitas y cuánto cuesta todo, con tus pruebas delante. <strong>Sin pagar nada.</strong></p>
+    <p class="note">Por qué funciona: el paciente no compra un tratamiento, compra quitarse la duda. Se le da todo lo que necesita para decidir, sin riesgo, y la clínica consigue la cita, que es donde se cierra el tratamiento.</p>
+  </div>
+  <ul><li><b>Valoración con el implantólogo</b><span>Hueso, encías y mordida: si eres candidato y qué opciones tienes.</span></li><li><b>Radiografía de diagnóstico</b><span>Para planificar con precisión dónde irá cada implante.</span></li><li><b>Plan con precio cerrado y cuota mensual</b><span>Fases, plazos y precio total, por escrito.</span></li><li class='bonus'><b>Bonus: segunda opinión de otro presupuesto</b><span>Tráelo y te decimos con franqueza si es lo que necesitas.</span></li></ul>
+</div></section>
+
+<section><div class="wrap">
+  <p class="kicker">Autoridad</p>
+  <h2>Cómo la web demuestra lo que vale vuestra clínica</h2>
+  <ul class="proofs"><li>Una franja de cifras de autoridad: +30 años de experiencia, WhatsApp respuesta directa, 0 € primera visita.</li></ul>
+</div></section>
+
+<section><div class="wrap roi">
+  <div>
+    <p class="kicker">Retorno de la inversión</p>
+    <h2>¿Cuántos pacientes hacen falta para recuperar la web?</h2>
+    <p>Mueve los valores con tus propios números.</p>
+    <label for="p">Pacientes nuevos más al mes gracias a la web: <output id="pv"></output></label><input id="p" type="range" min="1" max="40" value="8">
+    <label for="t">Facturación media por paciente nuevo: <output id="tv"></output></label><input id="t" type="range" min="100" max="6000" step="50" value="600">
+    <label for="a">Pacientes que aceptan el tratamiento: <output id="av"></output></label><input id="a" type="range" min="10" max="100" step="5" value="50">
+    <p class="note">Cifras de ejemplo para la simulación. No son una promesa de resultados: dependen de la clínica, del tráfico que reciba la web y de cómo se atiendan las reservas.</p>
+  </div>
+  <div class="res">
+    <div><span>Facturación extra al mes</span><b id="mes"></b></div>
+    <div><span>Facturación extra al año</span><b id="ano"></b></div>
+    <div><span>La web (5.000 €) se paga en</span><b id="rec"></b></div>
+    <div><span>Retorno anual sobre la inversión</span><b id="x"></b></div>
+  </div>
+</div></section>
+
+<section><div class="wrap price">
+  <div>
+    <p class="kicker">Inversión</p>
+    <p class="tag">5.000 €</p>
+    <p class="note">Precio de la web completa, lista para publicar.</p>
+  </div>
+  <ul class="checks">
+    <li>Diseño a medida con vuestra marca, fotos y equipo</li>
+    <li>Textos de venta y oferta para pacientes nuevos</li>
+    <li>Reserva online con vuestro horario</li>
+    <li>Calculadora de financiación y preguntas frecuentes</li>
+    <li>Optimización para móvil y para Google</li>
+    <li>Publicación y ajustes tras el lanzamiento</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <p class="kicker">Antes de publicar</p>
+  <h2>Lo que confirmaremos juntos</h2>
+  <ul class="todo"><li><input type='checkbox'> <span>La oferta «Estudio de Implantes Sin Coste»: que la clínica pueda cumplirla tal cual (qué incluye, valor de referencia «Valor normal 150 €», plazas por mes).</span></li><li><input type='checkbox'> <span>Los bonus y garantías (puntualidad, precio cerrado, descuentos): son propuestas para atraer pacientes; se quitan o ajustan las que la clínica no quiera asumir.</span></li><li><input type='checkbox'> <span>Horario real de cada día (la reserva online solo ofrece huecos dentro de ese horario).</span></li><li><input type='checkbox'> <span>Número de autorización sanitaria (obligatorio en publicidad sanitaria en Madrid).</span></li><li><input type='checkbox'> <span>Dirección a la que llegan las reservas (email o agenda de la clínica).</span></li><li><input type='checkbox'> <span>Textos legales (aviso legal, privacidad y cookies) con los datos de la sociedad.</span></li><li><input type='checkbox'> <span>3 reseñas reales de Google para la sección de opiniones (ahora solo enlaza a Google).</span></li><li><input type='checkbox'> <span>Fotos y currículum de los doctores que aún no tienen foto o formación detallada.</span></li><li><input type='checkbox'> <span>Sustituir las fotos de banco de imágenes (marcadas) por fotos reales de la clínica.</span></li></ul>
+</div></section>
+
+<footer><div class="wrap">Propuesta preparada para Dental Pozuelo · Dr. Menéndez. Las fotos, nombres y datos proceden de su web pública actual.</div></footer>
+<script>const PRICE=5000;
+const $=s=>document.querySelector(s);
+const eur=n=>Math.round(n).toLocaleString('es-ES')+' €';
+function roi(){
+  const p=+$('#p').value, t=+$('#t').value, a=+$('#a').value/100;
+  $('#pv').textContent=p; $('#tv').textContent=eur(t); $('#av').textContent=Math.round(a*100)+' %';
+  const mes=p*t*a; $('#mes').textContent=eur(mes); $('#ano').textContent=eur(mes*12);
+  const meses = mes>0 ? Math.ceil(PRICE/mes*10)/10 : 0;
+  $('#rec').textContent = mes>0 ? (meses<1 ? 'menos de 1 mes' : meses.toLocaleString('es-ES')+' meses') : '—';
+  $('#x').textContent = mes>0 ? (mes*12/PRICE).toFixed(1).replace('.',',')+'×' : '—';
+}
+['#p','#t','#a'].forEach(s=>$(s).addEventListener('input',roi)); roi();
+</script>
+</body></html>
